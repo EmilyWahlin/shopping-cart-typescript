@@ -10,7 +10,7 @@ type StoreItemProps = {
 
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-  const quantity = 1
+  const quantity = 0
 	return (
 		<Card className="h-100">
 			<Card.Img
@@ -33,11 +33,13 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 style={{ gap: ".5rem " }}
               >
                 <Button>-</Button>
-                <span className="fs-3">{quantity}</span>
+                <div>
+                  <span className="fs-3">{quantity}</span> in cart
+                  </div>
                 <Button>+</Button>
               </div>
           </div>}
-          Bye
+          <Button variant="danger" size="sm">Remove</Button>
         </div>
 			</Card.Body>
 		</Card>
